@@ -1,1 +1,4 @@
-log.txt
+/node_modules/
+/dist/
+/.vscode/
+/server/
