@@ -1,19 +1,19 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const PATHS = require("./paths");
+const PATH = require("./paths");
 
 module.exports = {
-	entry: path.join(PATHS.SRC, "index.js"),
+	entry: path.join(PATH.SRC, "index.js"),
 	output: {
-		filename: "[name][hash].js",
-		path: path.resolve(PATHS.DIST),
+		filename: "[name].[hash].js",
+		path: path.resolve(PATH.DIST),
 	},
 	resolve: {
 		extensions: [".js"],
 		alias: {
-			assets: path.resolve(PATHS.ASSETS),
-			src: path.resolve(PATHS.SRC),
+			assets: path.resolve(PATH.ASSETS),
+			src: path.resolve(PATH.SRC),
 		},
 	},
 	module: {
@@ -29,7 +29,7 @@ module.exports = {
 				},
 			},
 			{
-				test: /\.s[ac]ss$/i,
+				test: /\.s[ac]ss$/,
 				use: [
 					"style-loader",
 					{
@@ -40,16 +40,15 @@ module.exports = {
 				],
 			},
 			{
-				test: /\.css$/i,
+				test: /\.css/,
 				use: ["style-loader", "css-loader"],
 			},
 			{
 				test: /\.(png|jpe?g|gif)$/i,
-				use: [
-					{
-						loader: "file-loader",
-					},
-				],
+				loader: "file-loader",
+				options: {
+					name: "[path][name].[ext]",
+				},
 			},
 		],
 	},
@@ -59,7 +58,7 @@ module.exports = {
 		}),
 		new HtmlWebpackPlugin({
 			filename: "index.html",
-			template: path.join(PATHS.PUBLIC, "index.html"),
+			template: path.join(PATH.PUBLIC, "index.html"),
 		}),
 	],
 };

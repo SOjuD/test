@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800;900&family=Source+Sans+Pro:wght@400;700;900&display=swap');
 @import "zeroing.scss";
 @import "main-block.scss";
+@import "add-movie.scss";
+@import "delete-movie.scss";
+@import "edit-movie.scss";
+
+html {
+	height: 100%;
+}
 
 body {
 	background-color: #555555;
@@ -10,9 +17,25 @@ body {
 	font-family: Montserrat;
 }
 
+body.lock {
+	overflow: hidden;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.wrapper {}
+
+.page {}
+
 ._conteiner {
 	max-width: 1085px;
 	margin: 0 auto;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
 }
 
 ._ibg {
@@ -26,24 +49,4 @@ body {
 	left: 0;
 	top: 0;
 	object-fit: cover;
-}
-
-
-.wrapper {
-	min-height: 100%;
-	overflow: hidden;
-	display: flex;
-	flex-direction: column;
-}
-
-.page {
-	display: flex;
-
-	.page__main-block {
-		flex: 1 1 auto;
-	}
-
-	.page__tools {
-		flex: 0 1 20%;
-	}
 }

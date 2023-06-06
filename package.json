@@ -1,23 +1,23 @@
 {
-  "name": "siarheichyk",
+  "name": "anikey",
   "version": "1.0.0",
-  "description": "",
+  "description": "test",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint --fix --ext .js",
     "start": "webpack-dev-server --config webpack.config.dev.js",
-    "build": "webpack --config webpack.config.build.js",
-    "lint": "eslint --fix --ext .js ."
+    "build": "webpack --config webpack.config.build.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SOjuD/test.git"
+    "url": "git+https://github.com/Anikey-Pavel/test.git"
   },
-  "author": "",
+  "author": "Pavel",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SOjuD/test/issues"
+    "url": "https://github.com/Anikey-Pavel/test/issues"
   },
-  "homepage": "https://github.com/SOjuD/test#readme",
+  "homepage": "https://github.com/Anikey-Pavel/test#readme",
   "devDependencies": {
     "@babel/core": "^7.21.8",
     "@babel/preset-env": "^7.21.5",

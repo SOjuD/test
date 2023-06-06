@@ -1,13 +1,17 @@
-export const createMorebutton = (container) => {
-	const button = document.createElement("button");
-	button.typ = "button";
-	button.id = "showMore";
-	button.innerText = "show more";
+import { defaultLimit, updateMoviesState } from "../../api";
+import { getSearchParams } from "../../utils/search";
 
-	button.addEventListener("click", () => {
-		const url = new URL(window.location);
-		url.searchParams.set("page", 2);
-		window.history.pushState(null, "", url.toString());
-	});
+export const createMoreButton = (container) => {
+	const button = document.createElement("button");
+	button.type = "button";
+	button.id = "showMore";
+	button.innerText = "Show more";
+
+	const onClick = () => {
+		const currentLimit = getSearchParams()?.limit || defaultLimit;
+		updateMoviesState({ limit: currentLimit + defaultLimit })
+	};
+
+	button.addEventListener("click", onClick);
 	container.append(button);
 };
