@@ -1,7 +1,5 @@
+import defaultPoster from "../../../public/img/poster.jpg";
 import { parseDate } from "../../utils/date";
-
-const defaultPoster =
-	"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTsw4j6TBoBT9tGANsMBQNeb70zfEVpJ9DkQ&usqp=CAU";
 
 export const createMovieItem = (movie) => {
 	const item = document.createElement("div");
