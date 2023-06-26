@@ -36,12 +36,12 @@ const initApp = () => {
 	createDeleteMovie();
 	createAddMovie();
 
-	const { pathName } = window;
+	const { pathname } = window;
 	const movieDetailsRegex = /\/movies\//i;
 
 	const conteinerPage = createConteiner();
 
-	if (movieDetailsRegex.test(pathName)) {
+	if (movieDetailsRegex.test(pathname)) {
 		createMovieDatails(conteinerPage);
 	} else renderHomepage(conteinerPage);
 
@@ -49,3 +49,5 @@ const initApp = () => {
 };
 
 initApp();
+
+export const sum = (a, b) => a + b;

@@ -5,7 +5,7 @@ export const createFooter = (container) => {
 	const img = document.createElement("img");
 
 	footer.classList.add("main-block__footer");
-	footer.dataset.id = "footer";
+	footer.dataset.testid = "footer";
 	footerMainBlockConteiner.classList.add("footer-main-block");
 	footerMainBlockConteiner.classList.add("_conteiner");
 	footerMainBlockLogo.classList.add("footer-main-block__logo");

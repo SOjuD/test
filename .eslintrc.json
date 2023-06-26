@@ -1,16 +1,17 @@
 {
-    "env": {
-        "browser": true
-},
-    "extends": [
-        "airbnb",
-        "prettier"
-    ],
-    "plugins": [
-        "prettier"
-    ],
-    "rules": {
-        "prettier/prettier": "error",
-        "import/prefer-default-export": "off"
-    }
+	"env": {
+		"browser": true,
+		"jest": true
+	},
+	"extends": [
+		"airbnb",
+		"prettier"
+	],
+	"plugins": [
+		"prettier"
+	],
+	"rules": {
+		"prettier/prettier": "error",
+		"import/prefer-default-export": "off"
+	}
 }

@@ -1,3 +1,4 @@
+import logo from "../../../public/img/icons/logo.svg";
 import { updateMoviesState } from "../../api";
 
 const onSearch = (e) => {
@@ -34,7 +35,7 @@ export const createHeader = (container) => {
 	button.classList.add("header-main-block__button");
 	headerMainBlockImage.classList.add("header-main-block__image");
 
-	image.src = "./img/icons/logo.svg";
+	image.src = logo;
 	image.alt = "icon";
 	span.innerText = "+ ADD MOVIE";
 	headerMainBlockFind.innerText = "FIND YOUR MOVIE";
