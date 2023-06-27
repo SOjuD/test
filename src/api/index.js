@@ -48,7 +48,6 @@ export const updateMoviesState = (params) => {
 	if (params) updateSearchParams(params);
 	const currentParams = getSearchParams() || defaultParams;
 	return getMovies(currentParams).then((data) => {
-		console.log(data);
 		const movies = data.data;
 		const moviesElemenets = movies.map(createMovieItem);
 
